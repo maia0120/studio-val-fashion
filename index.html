@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Studio Val Fashion</title>
+<meta property="og:title" content="Studio Val Fashion">
+<meta property="og:description" content="Cabeleireira e manicure em Carapicuíba. Atendimento com hora marcada.">
+<meta property="og:type" content="website">
+<meta name="description" content="Studio Val Fashion, cabeleireira em Carapicuíba. Mais de 15 anos de experiência. Atendimento com hora marcada.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@400;500;600&display=swap">
+<style>
+  /* Layout: coluna centralizada no hero (como na arte da marca), depois seções alinhadas à esquerda com filetes dourados. Design escuro único, definido pela marca. */
+  :root {
+    --bg: #121212;
+    --bg-2: #181613;
+    --line: rgba(212, 175, 55, 0.3);
+    --line-soft: rgba(212, 175, 55, 0.16);
+    --gold: #D4AF37;
+    --gold-hi: #EBD27A;
+    --gold-lo: #B8932A;
+    --cream: #F3EAD7;
+    --cream-dim: #C7BDA7;
+    --ink: #14110a;
+    --display: "Cormorant Garamond", "Cormorant", Georgia, "Times New Roman", serif;
+    --body: "Jost", "Helvetica Neue", Arial, sans-serif;
+    --gutter-l: max(16px, env(safe-area-inset-left, 0px));
+    --gutter-r: max(16px, env(safe-area-inset-right, 0px));
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--cream);
+    font-family: var(--body);
+    font-size: 1rem;
+    line-height: 1.65;
+    padding-bottom: 84px;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, p, blockquote, figure, ul, dl, dd { margin: 0; }
+  ul { padding: 0; list-style: none; }
+  a { color: inherit; }
+  h1, h2, h3 { font-family: var(--display); font-weight: 500; text-wrap: balance; line-height: 1.12; }
+
+  .in {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding-left: var(--gutter-l);
+    padding-right: var(--gutter-r);
+  }
+  .sec { padding-block: clamp(56px, 9vw, 104px); }
+  .sec + .sec { border-top: 1px solid var(--line-soft); }
+
+  .eyebrow {
+    font-size: 0.78rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 14px;
+  }
+  h2 { font-size: clamp(1.8rem, 5.2vw, 2.7rem); color: var(--cream); }
+  .lede { color: var(--cream-dim); max-width: 60ch; margin-top: 14px; }
+
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; }
+
+  /* ---------- Botão dourado ---------- */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 56px;
+    padding: 14px 26px;
+    border-radius: 16px;
+    border: 1px solid var(--gold-hi);
+    background: linear-gradient(180deg, var(--gold-hi), var(--gold) 55%, var(--gold-lo));
+    color: var(--ink);
+    font-family: var(--body);
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-decoration: none;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4), 0 10px 34px rgba(212, 175, 55, 0.22);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4), 0 14px 40px rgba(212, 175, 55, 0.34); }
+  .btn svg { flex: none; }
+  .btn-ghost {
+    background: transparent;
+    color: var(--gold);
+    border: 1px solid var(--line);
+    box-shadow: none;
+    min-height: 48px;
+    font-size: 0.98rem;
+    font-weight: 500;
+  }
+  .btn-ghost:hover { background: rgba(212, 175, 55, 0.08); box-shadow: none; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    padding-block: clamp(40px, 7vw, 80px) clamp(56px, 9vw, 96px);
+    background:
+      radial-gradient(60% 45% at 0% 100%, rgba(212, 175, 55, 0.2), transparent 70%),
+      radial-gradient(60% 45% at 100% 100%, rgba(212, 175, 55, 0.2), transparent 70%),
+      radial-gradient(55% 40% at 50% 0%, rgba(212, 175, 55, 0.12), transparent 70%),
+      var(--bg);
+  }
+  .hero .in { display: flex; flex-direction: column; align-items: center; text-align: center; }
+  .mono {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: clamp(4rem, 14vw, 6rem);
+    line-height: 0.9;
+    color: var(--gold);
+    letter-spacing: -0.02em;
+    text-shadow: 0 0 40px rgba(212, 175, 55, 0.35);
+    display: flex;
+    align-items: flex-start;
+  }
+  .mono span:last-child { margin-left: -0.2em; margin-top: 0.12em; color: var(--gold-hi); }
+  .brand-row { display: flex; align-items: center; gap: clamp(10px, 3vw, 24px); margin-top: 14px; width: 100%; justify-content: center; }
+  .brand-row::before, .brand-row::after { content: ""; height: 1px; background: var(--line); flex: 1 1 0; max-width: 120px; min-width: 16px; }
+  .brand {
+    font-family: var(--display);
+    font-size: clamp(2.2rem, 9vw, 3.4rem);
+    font-weight: 500;
+    color: var(--gold-hi);
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .brand-sub { font-family: var(--display); font-size: clamp(1.15rem, 4vw, 1.5rem); color: var(--cream); margin-top: 6px; }
+  .brand-role { font-size: 0.78rem; letter-spacing: 0.4em; text-transform: uppercase; color: var(--cream-dim); margin-top: 6px; padding-left: 0.4em; }
+
+  .seal {
+    margin-top: 30px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 6px 14px;
+    padding: 12px 20px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    max-width: 100%;
+    font-size: 0.95rem;
+    color: var(--cream);
+  }
+  .stars { color: var(--gold); letter-spacing: 0.12em; font-size: 1.15rem; line-height: 1; }
+
+  .hero h1 { font-size: clamp(2.2rem, 7.4vw, 4rem); margin-top: 34px; max-width: 16ch; color: var(--cream); }
+  .hero .sub { margin-top: 18px; max-width: 46ch; color: var(--cream-dim); font-size: 1.08rem; }
+  .by-appt { display: inline-flex; align-items: center; gap: 10px; margin-top: 28px; font-family: var(--display); font-size: 1.3rem; color: var(--cream); }
+  .by-appt svg { color: var(--gold); flex: none; }
+  .hero .btn { margin-top: 18px; width: min(100%, 440px); }
+  .hero-phones { margin-top: 22px; font-family: var(--display); font-size: clamp(1.5rem, 5vw, 2rem); color: var(--gold-hi); line-height: 1.25; font-variant-numeric: lining-nums tabular-nums; }
+  .hero-phones span { display: block; }
+
+  /* ---------- Sobre ---------- */
+  .about { display: grid; gap: 28px 64px; grid-template-columns: 1fr; }
+  .about p.body { color: var(--cream-dim); font-size: 1.08rem; max-width: 56ch; }
+  .facts { display: flex; flex-wrap: wrap; gap: 14px 36px; margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--line-soft); }
+  .fact { min-width: 0; }
+  .fact b { display: block; font-family: var(--display); font-weight: 500; font-size: 2rem; color: var(--gold-hi); line-height: 1; }
+  .fact span { font-size: 0.86rem; color: var(--cream-dim); }
+  @media (min-width: 820px) { .about { grid-template-columns: 5fr 6fr; align-items: start; } }
+
+  /* ---------- Resultados ---------- */
+  .gallery {
+    display: flex;
+    gap: 16px;
+    margin-top: 36px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 12px;
+    margin-left: calc(-1 * var(--gutter-l));
+    margin-right: calc(-1 * var(--gutter-r));
+    padding-left: var(--gutter-l);
+    padding-right: var(--gutter-r);
+    scroll-padding-left: var(--gutter-l);
+  }
+  .shot { flex: 0 0 76%; scroll-snap-align: start; min-width: 0; }
+  .frame {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    max-width: 100%;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    overflow: hidden;
+    background: linear-gradient(160deg, #1e1b14, #131210 60%, #1a1710);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+  .frame::after { content: ""; position: absolute; inset: 8px; border: 1px solid var(--line-soft); pointer-events: none; }
+  .shot:hover .frame { border-color: var(--gold); box-shadow: 0 0 36px rgba(212, 175, 55, 0.16); }
+  .frame img { width: 100%; height: 100%; object-fit: cover; display: block; max-width: 100%; }
+  .ph { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 24px; text-align: center; color: var(--cream-dim); }
+  .ph svg { color: var(--gold); opacity: 0.8; }
+  .ph strong { font-family: var(--display); font-weight: 500; font-size: 1.3rem; color: var(--cream); }
+  .ph small { font-size: 0.8rem; letter-spacing: 0.08em; }
+  .shot figcaption { margin-top: 12px; font-size: 0.92rem; color: var(--cream-dim); }
+  .shot figcaption b { color: var(--gold); font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.74rem; display: block; margin-bottom: 2px; }
+  .more { margin-top: 28px; }
+  @media (min-width: 760px) {
+    .gallery { overflow: visible; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+    .shot { flex: none; }
+  }
+
+  /* ---------- Serviços ---------- */
+  .services { margin-top: 40px; display: grid; grid-template-columns: 1fr; gap: 0 56px; }
+  .svc { padding: 26px 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 4px 18px; }
+  .svc svg { color: var(--gold); margin-top: 4px; grid-row: span 2; }
+  .svc h3 { font-size: 1.55rem; color: var(--cream); }
+  .svc p { color: var(--cream-dim); font-size: 0.98rem; }
+  @media (min-width: 720px) { .services { grid-template-columns: 1fr 1fr; } }
+
+  /* ---------- Débora Nails ---------- */
+  .nails-grid { margin-top: 36px; display: grid; grid-template-columns: 1fr; gap: 36px 64px; }
+  .price-h { font-size: 0.78rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 6px; }
+  .price li { display: flex; align-items: baseline; gap: 12px; padding: 15px 0; border-bottom: 1px solid var(--line-soft); }
+  .price li:first-child { border-top: 1px solid var(--line-soft); }
+  .price li span { font-family: var(--display); font-size: 1.35rem; line-height: 1.2; min-width: 0; }
+  .price li i { flex: 1 1 12px; min-width: 12px; border-bottom: 1px dotted var(--line); transform: translateY(-5px); }
+  .price li b { font-family: var(--body); font-weight: 500; color: var(--gold-hi); white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .price li b.ask { color: var(--cream-dim); font-weight: 400; font-size: 0.92rem; }
+  .price.extra li span { font-size: 1.2rem; }
+  .nails-side { display: flex; flex-direction: column; gap: 28px; min-width: 0; }
+  .nails-cta { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
+  .nails-cta p { color: var(--cream-dim); font-size: 0.95rem; max-width: 40ch; }
+  .nails-cta .btn { width: min(100%, 420px); }
+  .gal-title { margin-top: 56px; font-size: clamp(1.5rem, 4.4vw, 2rem); }
+  .gal-title + .lede { margin-top: 8px; }
+  @media (min-width: 820px) { .nails-grid { grid-template-columns: 6fr 5fr; align-items: start; } }
+
+  /* ---------- Avaliações ---------- */
+  .reviews { margin-top: 36px; display: grid; grid-template-columns: 1fr; gap: 20px; }
+  .review { padding: 28px 26px; border: 1px solid var(--line); border-radius: 22px; background: var(--bg-2); min-width: 0; display: flex; flex-direction: column; gap: 14px; }
+  .review blockquote { font-family: var(--display); font-style: italic; font-size: clamp(1.4rem, 4.2vw, 1.75rem); line-height: 1.3; color: var(--cream); }
+  .review cite { font-style: normal; font-size: 0.92rem; color: var(--cream-dim); }
+  .review cite b { color: var(--gold-hi); font-weight: 500; }
+  .reviews-cta { margin-top: 28px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; }
+  .reviews-cta p { color: var(--cream-dim); font-size: 0.95rem; }
+  @media (min-width: 760px) { .reviews { grid-template-columns: 1fr 1fr; } }
+
+  /* ---------- Horários ---------- */
+  .hours-wrap { display: grid; gap: 28px 64px; grid-template-columns: 1fr; }
+  .status { margin-top: 18px; display: inline-flex; align-items: center; gap: 10px; font-size: 0.98rem; color: var(--cream); }
+  .status[hidden] { display: none; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--cream-dim); flex: none; }
+  .status.open .dot { background: #7BC47F; box-shadow: 0 0 0 4px rgba(123, 196, 127, 0.18); }
+  .hours { display: grid; gap: 0; }
+  .hours li { display: flex; justify-content: space-between; gap: 16px; padding: 16px 12px; border-bottom: 1px solid var(--line-soft); font-variant-numeric: tabular-nums; }
+  .hours li:first-child { border-top: 1px solid var(--line-soft); }
+  .hours li span:first-child { font-family: var(--display); font-size: 1.3rem; }
+  .hours li span:last-child { color: var(--cream-dim); }
+  .hours li.closed span:last-child { color: var(--cream-dim); opacity: 0.8; }
+  .hours li.today { background: rgba(212, 175, 55, 0.09); border-bottom-color: var(--line); }
+  .hours li.today span:first-child::after { content: " · hoje"; font-family: var(--body); font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
+  @media (min-width: 820px) { .hours-wrap { grid-template-columns: 5fr 6fr; align-items: start; } }
+
+  /* ---------- Rodapé ---------- */
+  footer { border-top: 1px solid var(--line); background: var(--bg-2); padding-block: clamp(44px, 7vw, 72px) 40px; }
+  .foot { display: grid; gap: 32px 56px; grid-template-columns: 1fr; }
+  .foot h2 { font-size: 1.9rem; }
+  .foot h3 { font-family: var(--body); font-size: 0.78rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 10px; }
+  .foot address { font-style: normal; color: var(--cream); max-width: 34ch; }
+  .foot .links { margin-top: 14px; }
+  .phone-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; padding: 8px 0; }
+  .phone-line .num { font-family: var(--display); font-size: 1.7rem; color: var(--gold-hi); font-variant-numeric: lining-nums tabular-nums; user-select: all; }
+  .phone-line small { color: var(--cream-dim); font-size: 0.85rem; }
+  .phone-line a { color: var(--gold); font-size: 0.9rem; text-underline-offset: 4px; }
+  .note { margin-top: 14px; display: inline-flex; gap: 10px; align-items: center; color: var(--cream); }
+  .note svg { color: var(--gold); flex: none; }
+  .copy { margin-top: 44px; padding-top: 22px; border-top: 1px solid var(--line-soft); color: var(--cream-dim); font-size: 0.85rem; }
+  @media (min-width: 820px) { .foot { grid-template-columns: 5fr 6fr; } }
+
+  /* ---------- Barra fixa no celular ---------- */
+  .sticky {
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    z-index: 20;
+    padding: 10px var(--gutter-r) calc(10px + env(safe-area-inset-bottom, 0px)) var(--gutter-l);
+    background: linear-gradient(180deg, rgba(18, 18, 18, 0), rgba(18, 18, 18, 0.92) 40%);
+  }
+  .sticky .btn { width: 100%; min-height: 52px; }
+  @media (min-width: 760px) { .sticky { display: none; } body { padding-bottom: 0; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .btn, .frame { transition: none; }
+    .btn:hover { transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="in">
+    <div class="mono" aria-hidden="true"><span>S</span><span>V</span></div>
+    <div class="brand-row"><span class="brand">Val Fashion</span></div>
+    <p class="brand-sub">– Studio de Beleza –</p>
+    <p class="brand-role">Cabeleireira</p>
+
+    <p class="seal"><span class="stars" role="img" aria-label="5 estrelas">★★★★★</span><span>Aprovado por nossas clientes</span></p>
+
+    <h1>Mais de 15 anos de excelência em cuidar de você</h1>
+    <p class="sub">Transformações incríveis, atendimento exclusivo e o cuidado que o seu cabelo merece com quem realmente entende do assunto.</p>
+
+    <p class="by-appt">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M12 6.5V12l3.5 2"/></svg>
+      Atendimento com hora marcada
+    </p>
+
+    <a class="btn" href="https://wa.me/5511957903683?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Studio%20Val%20Fashion." target="_blank" rel="noopener">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.3z"/><path d="M9 8.8c.3 3 2.800 5.600 6 6.200l1.200-1.400-2-1-.9.700c-.9-.4-1.700-1.200-2.100-2.100l.7-.9-1-2z"/></svg>
+      Agendar horário via WhatsApp
+    </a>
+
+    <p class="hero-phones"><span>(11) 95790-3683</span><span>(11) 95484-9638</span></p>
+  </div>
+</header>
+
+<main>
+  <section class="sec" id="sobre" aria-labelledby="sobre-t">
+    <div class="in about">
+      <div>
+        <p class="eyebrow">Sobre o studio</p>
+        <h2 id="sobre-t">Tradição, cuidado e paixão pela beleza</h2>
+      </div>
+      <div>
+        <p class="body">Com mais de 15 anos de experiência como cabeleireira, o Studio Val Fashion se consolidou como um espaço dedicado a realçar a sua melhor versão. Acreditamos que cada cabelo é único, por isso oferecemos um atendimento totalmente personalizado, focado na saúde dos fios e na sua autoestima.</p>
+        <div class="facts">
+          <div class="fact"><b>15+</b><span>anos de experiência</span></div>
+          <div class="fact"><b>5 estrelas</b><span>na avaliação das clientes</span></div>
+          <div class="fact"><b>Hora marcada</b><span>atenção total a cada cliente</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="resultados" aria-labelledby="res-t">
+    <div class="in">
+      <p class="eyebrow">Galeria</p>
+      <h2 id="res-t">Resultados e transformações</h2>
+      <p class="lede">Confira o resultado de algumas das nossas clientes e inspire-se para a sua próxima mudança.</p>
+
+      <div class="gallery" role="list">
+        <figure class="shot" role="listitem">
+          <div class="frame">
+            <img src="img/cabelo-1.jpg" alt="Cabelo longo com mechas caramelo e ondas soltas, visto de costas" loading="lazy" width="900" height="1125">
+          </div>
+          <figcaption><b>Coloração</b>Ombré caramelo com ondas</figcaption>
+        </figure>
+        <figure class="shot" role="listitem">
+          <div class="frame">
+            <img src="img/cabelo-2.jpg" alt="Cabelo loiro iluminado com ondas, visto de costas" loading="lazy" width="900" height="1125">
+          </div>
+          <figcaption><b>Mechas</b>Loiro iluminado e ondas</figcaption>
+        </figure>
+        <figure class="shot" role="listitem">
+          <div class="frame">
+            <img src="img/cabelo-3.jpg" alt="Cabelo castanho liso com mechas acobreadas, visto de lado" loading="lazy" width="900" height="1125">
+          </div>
+          <figcaption><b>Mechas e escova</b>Brilho e alinhamento</figcaption>
+        </figure>
+      </div>
+
+      <h3 class="gal-title">Unhas · Débora Nails</h3>
+      <p class="lede">Esmaltação em gel, cores e cuidados com as unhas das mãos e dos pés.</p>
+
+      <div class="gallery" role="list">
+        <figure class="shot" role="listitem">
+          <div class="frame">
+            <img src="img/unha-1.jpg" alt="Unhas curtas com esmaltação em gel vermelho cintilante" loading="lazy" width="900" height="1125">
+          </div>
+          <figcaption><b>Esmaltação em gel</b>Vermelho com brilho</figcaption>
+        </figure>
+        <figure class="shot" role="listitem">
+          <div class="frame">
+            <img src="img/unha-2.jpg" alt="Unhas curtas com esmaltação em gel cor terracota" loading="lazy" width="900" height="1125">
+          </div>
+          <figcaption><b>Esmaltação</b>Terracota</figcaption>
+        </figure>
+        <figure class="shot" role="listitem">
+          <div class="frame">
+            <img src="img/unha-3.jpg" alt="Unhas com esmaltação nude leitoso" loading="lazy" width="900" height="1125">
+          </div>
+          <figcaption><b>Esmaltação</b>Nude leitoso</figcaption>
+        </figure>
+      </div>
+
+      <p class="more"><a class="btn btn-ghost" href="https://www.instagram.com/studio_val_fashion/" target="_blank" rel="noopener">Ver mais resultados no nosso Instagram</a></p>
+    </div>
+  </section>
+
+  <section class="sec" id="servicos" aria-labelledby="serv-t">
+    <div class="in">
+      <p class="eyebrow">Serviços</p>
+      <h2 id="serv-t">Cuidado completo para o seu cabelo</h2>
+      <div class="services">
+        <article class="svc">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.500c3.200 4 5.500 6.800 5.500 10a5.500 5.500 0 0 1-11 0c0-3.200 2.300-6 5.500-10z"/><path d="M9.500 14.500a2.500 2.500 0 0 0 2.500 2.500"/></svg>
+          <h3>Tratamentos capilares</h3>
+          <p>Hidratação profunda para devolver maciez, brilho e saúde aos fios.</p>
+        </article>
+        <article class="svc">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.800 5.200L19 10l-5.200 1.800L12 17l-1.800-5.200L5 10l5.200-1.800z"/><path d="M19 16.500l.7 1.800 1.800.7-1.800.7-.7 1.800-.7-1.800-1.800-.7 1.800-.7z"/></svg>
+          <h3>Coloração e mechas</h3>
+          <p>Cor e iluminação exclusivas, pensadas para o seu tom de pele e estilo.</p>
+        </article>
+        <article class="svc">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6.500" cy="6.500" r="2.800"/><circle cx="6.500" cy="17.500" r="2.800"/><path d="M8.800 8.300L20 18M8.800 15.700L20 6"/></svg>
+          <h3>Cortes personalizados</h3>
+          <p>Cortes femininos feitos sob medida para o formato do seu rosto e a sua rotina.</p>
+        </article>
+        <article class="svc">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14c0-3.500 3-6 7-6h5v5h-3l-1 5H8z"/><path d="M16 9.500h4M16 12.500h3"/></svg>
+          <h3>Escova e penteados</h3>
+          <p>Escova e penteados para ocasiões especiais, com acabamento que dura o evento todo.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="unhas" aria-labelledby="un-t">
+    <div class="in">
+      <p class="eyebrow">Débora Nails · Manicure e pedicure</p>
+      <h2 id="un-t">Unhas cuidadas, do jeito que você gosta</h2>
+      <p class="lede">A Débora Nails agora faz parte do espaço. Atendimento com hora marcada, direto com a Débora.</p>
+
+      <div class="nails-grid">
+        <div>
+          <p class="price-h">Tabela de valores</p>
+          <ul class="price">
+            <li><span>Manicure</span><i></i><b>R$ 35,00</b></li>
+            <li><span>Pedicure</span><i></i><b>R$ 40,00</b></li>
+            <li><span>Manicure + Pedicure</span><i></i><b>R$ 70,00</b></li>
+            <li><span>Esmaltação em gel</span><i></i><b>R$ 80,00</b></li>
+            <li><span>Blindagem</span><i></i><b>R$ 60,00</b></li>
+            <li><span>Blindagem + esmaltação tradicional</span><i></i><b>R$ 70,00</b></li>
+            <li><span>Cutilagem, esmaltar e remoção</span><i></i><b class="ask">Valor individual, consulte</b></li>
+          </ul>
+        </div>
+        <div class="nails-side">
+          <div>
+            <p class="price-h">Adicionais</p>
+            <ul class="price extra">
+              <li><span>Francesinha tradicional</span><i></i><b>R$ 3,00</b></li>
+              <li><span>Decoração</span><i></i><b>R$ 10,00</b></li>
+              <li><span>Pedraria ou adesivo</span><i></i><b>R$ 3,00</b></li>
+            </ul>
+          </div>
+          <div class="nails-cta">
+            <a class="btn" href="https://wa.me/5511954849638?text=Ol%C3%A1%2C%20D%C3%A9bora!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20unhas." target="_blank" rel="noopener">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.3z"/><path d="M9 8.8c.3 3 2.800 5.600 6 6.200l1.200-1.400-2-1-.9.700c-.9-.4-1.700-1.200-2.100-2.100l.7-.9-1-2z"/></svg>
+              Agendar com a Débora Nails
+            </a>
+            <p>WhatsApp da Débora: (11) 95484-9638</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="avaliacoes" aria-labelledby="av-t">
+    <div class="in">
+      <p class="eyebrow">Avaliações</p>
+      <h2 id="av-t">Comprovada por quem mais importa: nossas clientes</h2>
+      <div class="reviews">
+        <figure class="review">
+          <span class="stars" role="img" aria-label="5 estrelas">★★★★★</span>
+          <blockquote>“Maravilhosa! Atendimento impecável e resultado incrível.”</blockquote>
+          <figcaption><cite><b>Camila Mendes Pontes Luciano</b> · avaliação no Google</cite></figcaption>
+        </figure>
+        <figure class="review">
+          <span class="stars" role="img" aria-label="5 estrelas">★★★★★</span>
+          <blockquote>“Excelente profissional, recomendo muito o trabalho!”</blockquote>
+          <figcaption><cite><b>Pablo Pereira</b> · avaliação no Google</cite></figcaption>
+        </figure>
+      </div>
+      <div class="reviews-cta">
+        <a class="btn btn-ghost" href="https://www.google.com/maps/place/Val+Fashion+Cabeleireira/@-23.5499441,-46.8236825,17z/data=!4m8!3m7!1s0x94ceffd8e6845a29:0x261c41bca75c9d57!8m2!3d-23.5499441!4d-46.8236825!9m1!1b1!16s%2Fg%2F11b7g0s244?entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Ver todas as avaliações no Google</a>
+        <p>Atendimento com hora marcada e excelência em cada detalhe.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="horarios" aria-labelledby="hor-t">
+    <div class="in hours-wrap">
+      <div>
+        <p class="eyebrow">Horários</p>
+        <h2 id="hor-t">Quando atendemos</h2>
+        <p class="lede">Atendimento somente com hora marcada. Chame no WhatsApp para reservar o seu.</p>
+        <p class="status" id="status" hidden><span class="dot" aria-hidden="true"></span><span id="status-text"></span></p>
+      </div>
+      <ul class="hours" id="hours">
+        <li class="closed" data-days="1"><span>Segunda-feira</span><span>Fechado</span></li>
+        <li data-days="2,3,4,5"><span>Terça a sexta-feira</span><span>09:00 às 18:00</span></li>
+        <li data-days="6"><span>Sábado</span><span>08:00 às 18:00</span></li>
+        <li class="closed" data-days="0"><span>Domingo</span><span>Fechado</span></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer id="contato">
+  <div class="in">
+    <div class="foot">
+      <div>
+        <h2>Vamos cuidar de você</h2>
+        <p class="note">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9.500"/><path d="M12 6.500V12l3.500 2"/></svg>
+          Atendimento com hora marcada
+        </p>
+      </div>
+      <div>
+        <h3>Endereço</h3>
+        <address>Estrada do Gopiúva, 841<br>Vila da Oportunidade (Pq. Jandaia)<br>Carapicuíba – SP</address>
+        <p class="links"><a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Estrada+do+Gopi%C3%BAva+841+Carapicu%C3%ADba+SP" target="_blank" rel="noopener">Abrir no mapa</a></p>
+        <h3 style="margin-top:32px">Telefone e WhatsApp</h3>
+        <div class="phone-line">
+          <span class="num">(11) 95790-3683</span>
+          <small>responde rapidamente</small>
+          <a href="https://wa.me/5511957903683" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+        </div>
+        <div class="phone-line">
+          <span class="num">(11) 95484-9638</span>
+          <small>Débora Nails</small>
+          <a href="https://wa.me/5511954849638" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <p class="copy">© Studio Val Fashion · Cabeleireira em Carapicuíba</p>
+  </div>
+</footer>
+
+<div class="sticky">
+  <a class="btn" href="https://www.google.com/maps/place/Val+Fashion+Cabeleireira/@-23.5499441,-46.8236825,17z/data=!4m8!3m7!1s0x94ceffd8e6845a29:0x261c41bca75c9d57!8m2!3d-23.5499441!4d-46.8236825!9m1!1b1!16s%2Fg%2F11b7g0s244?entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Avalie-nos no Google</a>
+</div>
+
+<script>
+  (function () {
+    var SCHEDULE = { 0: null, 1: null, 2: [9, 18], 3: [9, 18], 4: [9, 18], 5: [9, 18], 6: [8, 18] };
+    var NAMES = ["domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado"];
+    var MAP = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+    function pad(n) { return (n < 10 ? "0" : "") + n; }
+    try {
+      var parts = new Intl.DateTimeFormat("en-US", { timeZone: "America/Sao_Paulo", weekday: "short", hour: "numeric", minute: "numeric", hourCycle: "h23" }).formatToParts(new Date());
+      var day = 0, hour = 0, min = 0;
+      parts.forEach(function (p) {
+        if (p.type === "weekday") day = MAP[p.value];
+        if (p.type === "hour") hour = parseInt(p.value, 10);
+        if (p.type === "minute") min = parseInt(p.value, 10);
+      });
+      var now = hour + min / 60;
+      document.querySelectorAll("#hours li").forEach(function (li) {
+        if (li.getAttribute("data-days").split(",").indexOf(String(day)) > -1) li.classList.add("today");
+      });
+      var today = SCHEDULE[day], text, open = false;
+      if (today && now >= today[0] && now < today[1]) {
+        open = true;
+        text = "Aberto agora · atendemos até as " + pad(today[1]) + ":00";
+      } else if (today && now < today[0]) {
+        text = "Fechado agora · abrimos hoje às " + pad(today[0]) + ":00";
+      } else {
+        for (var d = 1; d <= 7; d++) {
+          var idx = (day + d) % 7;
+          if (SCHEDULE[idx]) {
+            text = "Fechado agora · abrimos " + (d === 1 ? "amanhã" : NAMES[idx]) + " às " + pad(SCHEDULE[idx][0]) + ":00";
+            break;
+          }
+        }
+      }
+      var st = document.getElementById("status");
+      document.getElementById("status-text").textContent = text;
+      if (open) st.classList.add("open");
+      st.hidden = false;
+    } catch (e) { /* sem status: a tabela de horários continua visível */ }
+  })();
+</script>
+</body>
+</html>
